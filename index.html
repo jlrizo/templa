@@ -22,12 +22,23 @@ body {
   font-family: 'Inter', sans-serif;
   background: #000;
   color: #fff;
+  overflow-x: hidden;
+}
+
+/* FONDO DIFUMINADO */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url("bg.jpg") center/cover no-repeat;
+  filter: blur(18px) brightness(0.4);
+  transform: scale(1.1);
+  z-index: -1;
 }
 
 /* SECCIONES */
 .section {
-  height: 100vh;
-  padding: 60px;
+  min-height: 100vh;
+  padding: 80px 8%;
   display: flex;
   align-items: center;
 }
@@ -39,38 +50,32 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 8vw, 7rem);
-  letter-spacing: 6px;
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  letter-spacing: 8px;
   font-weight: 600;
-}
-
-.hero p {
-  margin-top: 20px;
-  font-weight: 300;
-  opacity: 0.7;
 }
 
 /* TEXTO EDITORIAL */
 .editorial {
-  max-width: 700px;
+  max-width: 720px;
 }
 
 .editorial h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 20px;
 }
 
 .editorial p {
   font-size: 1.1rem;
+  line-height: 1.8;
   opacity: 0.75;
-  line-height: 1.7;
 }
 
 /* BOTÓN */
 a {
   display: inline-block;
   margin-top: 40px;
-  padding: 12px 28px;
+  padding: 14px 34px;
   border: 1px solid white;
   color: white;
   text-decoration: none;
@@ -82,10 +87,22 @@ a:hover {
   color: black;
 }
 
-/* MÓVIL */
+/* ANIMACIONES */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   .section {
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
 }
 </style>
@@ -93,36 +110,53 @@ a:hover {
 
 <body>
 
-<!-- SECCIÓN 1 -->
+<div class="bg"></div>
+
+<!-- HERO -->
 <section class="section hero">
-  <div>
+  <div class="fade">
     <h1>TEMPLA</h1>
-    <p>DISCIPLINA • CARÁCTER • IDENTIDAD</p>
   </div>
 </section>
 
 <!-- SECCIÓN 2 -->
 <section class="section">
-  <div class="editorial">
+  <div class="editorial fade">
     <h2>No es moda.</h2>
     <p>
-      TEMPLA nace del control interno, del silencio,
-      del trabajo constante cuando nadie mira.
+      Es carácter. Es silencio. Es disciplina
+      cuando nadie aplaude.
     </p>
   </div>
 </section>
 
 <!-- SECCIÓN 3 -->
 <section class="section">
-  <div class="editorial">
+  <div class="editorial fade">
     <h2>Oversize.</h2>
     <p>
-      Diseños limpios, mensaje directo,
-      presencia sin ruido.
+      Presencia limpia.
+      Mensaje directo.
+      Identidad firme.
     </p>
     <a href="https://instagram.com/">Instagram</a>
   </div>
 </section>
 
+<script>
+const fades = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+fades.forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
+
