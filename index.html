@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>TEMPLA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* SECCIONES */
+.section {
+  height: 100vh;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* HERO */
+.hero {
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  letter-spacing: 6px;
+  font-weight: 600;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+/* TEXTO EDITORIAL */
+.editorial {
+  max-width: 700px;
+}
+
+.editorial h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.editorial p {
+  font-size: 1.1rem;
+  opacity: 0.75;
+  line-height: 1.7;
+}
+
+/* BOTÓN */
+a {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 28px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: white;
+  color: black;
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SECCIÓN 1 -->
+<section class="section hero">
+  <div>
+    <h1>TEMPLA</h1>
+    <p>DISCIPLINA • CARÁCTER • IDENTIDAD</p>
+  </div>
+</section>
+
+<!-- SECCIÓN 2 -->
+<section class="section">
+  <div class="editorial">
+    <h2>No es moda.</h2>
+    <p>
+      TEMPLA nace del control interno, del silencio,
+      del trabajo constante cuando nadie mira.
+    </p>
+  </div>
+</section>
+
+<!-- SECCIÓN 3 -->
+<section class="section">
+  <div class="editorial">
+    <h2>Oversized.</h2>
+    <p>
+      Diseños limpios, mensaje directo,
+      presencia sin ruido.
+    </p>
+    <a href="https://instagram.com/">Instagram</a>
+  </div>
+</section>
+
+</body>
+</html>
