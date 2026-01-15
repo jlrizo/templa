@@ -147,12 +147,12 @@ a {
   <p>$500 MXN</p>
   <img src="gods-front.jpg">
   <img src="gods-back.jpg">
-  <div class="sizes">
-   <div class="sizes">
-  <a href="https://www.instagram.com/direct/t/its_templa" target="_blank"><button onclick="enviarDM('S','GOD’S PLAN',1)">S (1)</button>
-  <a href="https://www.instagram.com/direct/t/its_templa" target="_blank"><button onclick="enviarDM('M','GOD’S PLAN',3)">M (3)</button>
-  <a href="https://www.instagram.com/direct/t/its_templa" target="_blank"><button onclick="enviarDM('L','GOD’S PLAN',2)">L (2)</button>
-</div>  
+ <div class="sizes">
+  <button onclick="enviarDM('S','GOD’S PLAN',1)">S (1)</button>
+  <button onclick="enviarDM('M','GOD’S PLAN',3)">M (3)</button>
+  <button onclick="enviarDM('L','GOD’S PLAN',2)">L (2)</button>
+</div>
+
 </section>
 
 <section class="section product" style="margin-top:40px;">
@@ -160,10 +160,10 @@ a {
   <p>$500 MXN</p>
   <img src="templa-black-front.jpg">
   <img src="templa-black-back.jpg">
-  <div class="sizes">
-  <a href="https://www.instagram.com/direct/t/its_templa" target="_blank"><button onclick="enviarDM('S','TEMPLA NEGRA',1)">S (1)</button>
-  <a href="https://www.instagram.com/direct/t/its_templa" target="_blank"><button onclick="enviarDM('M','TEMPLA NEGRA',2)">M (2)</button>
-  <a href="https://www.instagram.com/direct/t/its_templa" target="_blank"><button onclick="enviarDM('L','TEMPLA NEGRA',2)">L (2)</button>
+ <div class="sizes">
+  <button onclick="enviarDM('S','TEMPLA NEGRA',1)">S (1)</button>
+  <button onclick="enviarDM('M','TEMPLA NEGRA',2)">M (2)</button>
+  <button onclick="enviarDM('L','TEMPLA NEGRA',2)">L (2)</button>
 </div>
 </section>
 
@@ -173,25 +173,28 @@ a {
   <img src="templa-white-front.jpg">
   <img src="templa-white-back.jpg">
   <div class="sizes">
-  <a href="https://www.instagram.com/direct/t/its_templa" target="_blank"><button onclick="enviarDM('S','TEMPLA BLANCA',1)">S (1)</button>
-  <a href="https://www.instagram.com/direct/t/its_templa" target="_blank"><button onclick="enviarDM('M','TEMPLA BLANCA',2)">M (2)</button>
-  <a href="https://www.instagram.com/direct/t/its_templa" target="_blank"><button onclick="enviarDM('L','TEMPLA BLANCA',1)">L (1)</button>
+  <button onclick="enviarDM('S','TEMPLA BLANCA',1)">S (1)</button>
+  <button onclick="enviarDM('M','TEMPLA BLANCA',2)">M (2)</button>
+  <button onclick="enviarDM('L','TEMPLA BLANCA',1)">L (1)</button>
 </div>
-<script>
 <script>
 function enviarDM(talla, producto, stock) {
   const mensaje =
     `Hola, me interesa la talla "${talla}" de ${producto}. ` +
     `Quedan ${stock}. Info listo para enviarmelo`;
 
-  const confirmar = confirm(
-    `¿Quieres enviar un mensaje directo a Instagram?\n\n${mensaje}`
+  const confirmar = window.confirm(
+    "¿Quieres mandar un DM a Instagram?\n\n" + mensaje
   );
 
   if (confirmar) {
-    const url = `https://ig.me/m/its_templa?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
+    const url =
+      "https://www.instagram.com/direct/new/?" +
+      "text=" + encodeURIComponent(mensaje) +
+      "&username=its_templa";
 
+    window.location.href = url;
+  }
 </script>
 
 </body>
