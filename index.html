@@ -199,14 +199,12 @@ function enviarDM(talla, producto, stock) {
 
 <script>
 function enviarDM(talla, producto, stock) {
-  alert("FUNCIONANDO"); // ← prueba obligatoria
-
   const mensaje =
-    'Hola, me interesa la talla "' + talla + '" de ' + producto +
-    '. Quedan ' + stock + '. Info listo para enviarmelo';
+    `Hola, me interesa la talla ${talla} de ${producto}. ¿Sigue disponible?`;
 
   const confirmar = confirm(
-    "¿Quieres mandar un DM a Instagram?\n\n" + mensaje
+    "¿Quieres mandar un mensaje por Instagram?\n\n" +
+    "Mensaje sugerido:\n" + mensaje
   );
 
   if (confirmar) {
@@ -214,6 +212,7 @@ function enviarDM(talla, producto, stock) {
   }
 }
 </script>
+
 </body>
 </html>
 
