@@ -100,6 +100,11 @@ a {
   padding: 8px 14px;
   font-size: 0.9rem;
 }
+  .hint {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 10px;
+}
 </style>
 </head>
 
@@ -177,6 +182,10 @@ a {
   <button onclick="enviarDM('M','TEMPLA BLANCA',2)">M (2)</button>
   <button onclick="enviarDM('L','TEMPLA BLANCA',1)">L (1)</button>
 </div>
+  <p class="hint">
+  Te abrimos Instagram y copiamos el mensaje para enviarlo rápido.
+</p>
+
 <script>
 function enviarDM(talla, producto, stock) {
   const mensaje =
@@ -198,17 +207,20 @@ function enviarDM(talla, producto, stock) {
 </script>
 
 <script>
-function enviarDM(talla, producto, stock) {
+function enviarDM(talla, producto) {
   const mensaje =
     `Hola, me interesa la talla ${talla} de ${producto}. ¿Sigue disponible?`;
 
   const confirmar = confirm(
     "¿Quieres mandar un mensaje por Instagram?\n\n" +
-    "Mensaje sugerido:\n" + mensaje
+    "El mensaje se copiará para que lo pegues:\n\n" +
+    mensaje
   );
 
   if (confirmar) {
-    window.location.href = "https://www.instagram.com/its_templa/";
+    navigator.clipboard.writeText(mensaje).then(() => {
+      window.location.href = "https://www.instagram.com/its_templa/";
+    });
   }
 }
 </script>
