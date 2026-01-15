@@ -197,6 +197,23 @@ function enviarDM(talla, producto, stock) {
   }
 </script>
 
+<script>
+function enviarDM(talla, producto, stock) {
+  alert("FUNCIONANDO"); // ← prueba obligatoria
+
+  const mensaje =
+    'Hola, me interesa la talla "' + talla + '" de ' + producto +
+    '. Quedan ' + stock + '. Info listo para enviarmelo';
+
+  const confirmar = confirm(
+    "¿Quieres mandar un DM a Instagram?\n\n" + mensaje
+  );
+
+  if (confirmar) {
+    window.location.href = "https://www.instagram.com/its_templa/";
+  }
+}
+</script>
 </body>
 </html>
 
