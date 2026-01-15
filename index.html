@@ -7,21 +7,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
 
-<style.sizes {
-  display: flex;
-  gap: 10px;
-  margin-top: 18px;
-  flex-wrap: wrap;
-}
-
-.sizes button {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 8px 14px;
-  font-size: 0.9rem;
-}
->
+<style>
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +25,7 @@ body {
   overflow-x: hidden;
 }
 
-/* FONDO DIFUMINADO */
+/* FONDO */
 .bg {
   position: fixed;
   inset: 0;
@@ -50,74 +36,69 @@ body {
 
 /* SECCIONES */
 .section {
-  min-height: auto;
   padding: 60px 20px;
-  display: flex;
-  align-items: flex-start;
 }
 
 /* HERO */
 .hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 85vh;
 }
 
 .hero h1 {
-  font-size: clamp(3.5rem, 10vw, 8rem);
-  letter-spacing: 8px;
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  letter-spacing: 6px;
   font-weight: 600;
 }
 
-/* TEXTO EDITORIAL */
+/* EDITORIAL */
 .editorial {
   max-width: 720px;
 }
 
 .editorial h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 16px;
 }
 
 .editorial p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.05rem;
   opacity: 0.75;
+  line-height: 1.7;
 }
 
-/* BOTÓN */
+/* BOTÓN IG */
 a {
   display: inline-block;
-  margin-top: 40px;
-  padding: 14px 34px;
+  margin-top: 28px;
+  padding: 12px 28px;
   border: 1px solid white;
   color: white;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-a:hover {
-  background: white;
-  color: black;
+/* PRODUCTOS */
+.product img {
+  width: 100%;
+  max-width: 360px;
+  margin-top: 14px;
 }
 
-/* ANIMACIONES */
-.fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s ease;
+.sizes {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
 }
 
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .section {
-    padding: 60px 20px;
-  }
+.sizes button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 14px;
+  font-size: 0.9rem;
 }
 </style>
 </head>
@@ -127,15 +108,13 @@ a:hover {
 <div class="bg"></div>
 
 <!-- HERO -->
-<section class="section hero">
-  <div class="fade">
-    <h1>TEMPLA</h1>
-  </div>
+<section class="hero">
+  <h1>TEMPLA</h1>
 </section>
 
-<!-- SECCIÓN 2 -->
+<!-- TEXTO -->
 <section class="section">
-  <div class="editorial fade">
+  <div class="editorial">
     <h2>No es moda.</h2>
     <p>
       TEMPLA nace del control interno, del silencio,
@@ -144,78 +123,52 @@ a:hover {
   </div>
 </section>
 
-<!-- SECCIÓN 3 -->
 <section class="section">
-  <div class="editorial fade">
+  <div class="editorial">
     <h2>Oversize.</h2>
     <p>
-      Presencia limpia.
-      Mensaje directo.
+      Presencia limpia.<br>
+      Mensaje directo.<br>
       Identidad firme.
     </p>
- <a href="https://instagram.com/its_templa" target="_blank">
-  @its_templa
-</a>
 
-</a>
-
+    <a href="https://instagram.com/its_templa" target="_blank">
+      @its_templa
+    </a>
   </div>
+</section>
+
 <!-- PRODUCTOS -->
-<section class="section">
-  <div class="editorial fade">
-    <h2>Drop</h2>
-    <p>Ediciones limitadas.</p>
+<section class="section product">
+  <h2>GOD’S PLAN</h2>
+  <p>$500 MXN</p>
+  <img src="gods-front.jpg">
+  <img src="gods-back.jpg">
+  <div class="sizes">
+    <button>S</button><button>M</button><button>L</button>
   </div>
 </section>
 
-<!-- GOD'S PLAN -->
-<section class="section">
-  <div class="editorial fade">
-    <h2>GOD’S PLAN</h2>
-    <p style="margin-top:6px;">$500 MXN</p>
-
-    <img src="gods-front.jpg" style="width:100%; max-width:360px; margin-top:16px;">
-    <img src="gods-back.jpg" style="width:100%; max-width:360px; margin-top:12px;">
-
-    <div class="sizes">
-      <button>S (1)</button>
-      <button>M (3)</button>
-      <button>L (2)</button>
-    </div>
+<section class="section product">
+  <h2>TEMPLA NEGRA</h2>
+  <p>$500 MXN</p>
+  <img src="templa-black-front.jpg">
+  <img src="templa-black-back.jpg">
+  <div class="sizes">
+    <button>S</button><button>M</button><button>L</button>
   </div>
 </section>
 
-<!-- TEMPLA NEGRA -->
-<section class="section">
-  <div class="editorial fade">
-    <h2>TEMPLA NEGRA</h2>
-    <p style="margin-top:6px;">$500 MXN</p>
-
-    <img src="templa-black-front.jpg" style="width:100%; max-width:360px; margin-top:16px;">
-    <img src="templa-black-back.jpg" style="width:100%; max-width:360px; margin-top:12px;">
-
-    <div class="sizes">
-      <button>S (1)</button>
-      <button>M (2)</button>
-      <button>L (2)</button>
-    </div>
+<section class="section product">
+  <h2>TEMPLA BLANCA</h2>
+  <p>$550 MXN</p>
+  <img src="templa-white-front.jpg">
+  <img src="templa-white-back.jpg">
+  <div class="sizes">
+    <button>S</button><button>M</button><button>L</button>
   </div>
 </section>
 
-<!-- TEMPLA BLANCA -->
-<section class="section">
-  <div class="editorial fade">
-    <h2>TEMPLA BLANCA</h2>
-    <p style="margin-top:6px;">$550 MXN</p>
-
-    <img src="templa-white-front.jpg" style="width:100%; max-width:360px; margin-top:16px;">
-    <img src="templa-white-back.jpg" style="width:100%; max-width:360px; margin-top:12px;">
-
-    <div class="sizes">
-      <button>S (1)</button>
-      <button>M (2)</button>
-      <button>L (1)</button>
-    </div>
-  </div>
-</section>
+</body>
+</html>
 
