@@ -81,29 +81,29 @@ a {
 }
 
 /* PRODUCTOS */
-.product img {
-  width: 100%;
-  max-width: 360px;
-  margin-top: 14px;
-}
-
-.sizes {
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.sizes button {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 8px 14px;
-  font-size: 0.9rem;
-}
-  .hint {
-  font-size: 0.8rem;
-  opacity: 0.6;
+.price {
   margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  opacity: 0.5;
+  margin-right: 8px;
+}
+
+.new-price {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.sale {
+  color: #00ff88;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-left: 6px;
+}
+
 }
 </style>
 </head>
@@ -149,7 +149,13 @@ a {
 <!-- PRODUCTOS -->
 <section class="section product" style="margin-top:40px;">
   <h2>GOD’S PLAN</h2>
-  <p>$650 MXN</p>
+  <p class="price">
+ <p class="price">
+  <span class="old-price">$650</span>
+  <span class="new-price">$549</span>
+  <span class="sale">PROMO</span>
+</p>
+
   <img src="gods-front.jpg">
   <img src="gods-back.jpg">
  <div class="sizes">
@@ -161,7 +167,12 @@ a {
 
 <section class="section product" style="margin-top:40px;">
   <h2>TEMPLA NEGRA</h2>
-  <p>$600 MXN</p>
+  <p class="price">
+  <span class="old-price">$600</span>
+  <span class="new-price">$499</span>
+  <span class="sale">PROMO</span>
+</p>
+
   <img src="templa-black-front.jpg">
   <img src="templa-black-back.jpg">
  <div class="sizes">
@@ -172,7 +183,12 @@ a {
 
 <section class="section product" style="margin-top:40px;">
   <h2>TEMPLA BLANCA</h2>
-  <p>$580 MXN</p>
+<p class="price">
+  <span class="old-price">$600</span>
+  <span class="new-price">$499</span>
+  <span class="sale">PROMO</span>
+</p>
+
   <img src="templa-white-front.jpg">
   <img src="templa-white-back.jpg">
   <div class="sizes">
