@@ -81,30 +81,42 @@ a {
 }
 
 /* PRODUCTOS */
-.price {
-  margin-top: 10px;
-  font-size: 1.3rem;
+/* 🔥 MOBILE PERFECTO */
+@media (max-width: 600px) {
+
+  .section {
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+
+  .editorial h2 {
+    font-size: 1.6rem;
+  }
+
+  .product img {
+    max-width: 100%;
+  }
+
+  .sizes {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sizes button {
+    flex: 1;
+    min-width: 70px;
+  }
+
+  .new-price {
+    font-size: 1.6rem;
+  }
+
 }
 
-.old-price {
-  text-decoration: line-through;
-  opacity: 0.5;
-  margin-right: 8px;
-}
-
-.new-price {
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-
-.sale {
-  color: #00ff88;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  margin-left: 6px;
-}
-
-}
 </style>
 </head>
 
