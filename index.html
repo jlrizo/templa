@@ -82,39 +82,26 @@ a {
 
 /* PRODUCTOS */
 /* 🔥 MOBILE PERFECTO */
-@media (max-width: 600px) {
+.price {
+  margin-top: 10px;
+}
 
-  .section {
-    padding: 60px 16px;
-  }
+.old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+  font-size: 1rem;
+  margin-right: 8px;
+}
 
-  .hero h1 {
-    font-size: 3rem;
-    letter-spacing: 4px;
-  }
+.new-price {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
 
-  .editorial h2 {
-    font-size: 1.6rem;
-  }
-
-  .product img {
-    max-width: 100%;
-  }
-
-  .sizes {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .sizes button {
-    flex: 1;
-    min-width: 70px;
-  }
-
-  .new-price {
-    font-size: 1.6rem;
-  }
-
+.sale {
+  color: #00ff88;
+  font-size: 0.8rem;
+  margin-left: 6px;
 }
 
 </style>
@@ -132,6 +119,8 @@ a {
 
 
 
+
+  
 <!-- TEXTO -->
 <section class="section">
   <div class="editorial">
@@ -143,6 +132,10 @@ a {
   </div>
 </section>
 
+
+
+
+  
 <section class="section">
   <div class="editorial">
     <h2>Oversize.</h2>
@@ -162,17 +155,17 @@ a {
 <section class="section product" style="margin-top:40px;">
   <h2>GOD’S PLAN</h2>
   <p class="price">
- <p class="price">
   <span class="old-price">$650</span>
   <span class="new-price">$549</span>
   <span class="sale">PROMO</span>
 </p>
 
+
   <img src="gods-front.jpg">
   <img src="gods-back.jpg">
  <div class="sizes">
-  <button onclick="enviarDM('S','GOD’S PLAN',1)">S (1)</button>
-  <button onclick="enviarDM('M','GOD’S PLAN',3)">M (1)</button>
+  <button onclick="enviarDM('S','GOD’S PLAN',1)">S (sold out)</button>
+  <button onclick="enviarDM('M','GOD’S PLAN',3)">M (sold out)</button>
 </div>
 
 </section>
