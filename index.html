@@ -81,29 +81,30 @@ a {
 }
 
 /* PRODUCTOS */
-/* 🔥 MOBILE PERFECTO */
-.price {
-  margin-top: 10px;
+.sizes {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.old-price {
-  text-decoration: line-through;
-  opacity: 0.6;
+.sizes button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 16px 0;
   font-size: 1rem;
-  margin-right: 8px;
+  width: 100%;
+ max-width: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.new-price {
-  font-weight: bold;
-  font-size: 1.8rem;
+.sizes button:active {
+  background: white;
+  color: black;
 }
-
-.sale {
-  color: #00ff88;
-  font-size: 0.8rem;
-  margin-left: 6px;
-}
-
 </style>
 </head>
 
@@ -117,9 +118,6 @@ a {
 </section>
 
 
-
-
-
   
 <!-- TEXTO -->
 <section class="section">
@@ -131,8 +129,6 @@ a {
     </p>
   </div>
 </section>
-
-
 
 
   
@@ -163,10 +159,13 @@ a {
 
   <img src="gods-front.jpg">
   <img src="gods-back.jpg">
- <div class="sizes">
-  <button onclick="enviarDM('S','GOD’S PLAN',1)">S (sold out)</button>
-  <button onclick="enviarDM('M','GOD’S PLAN',3)">M (sold out)</button>
+<div class="sizes">
+  <button onclick="enviarDM('S','GOD’S PLAN')">S (sold out)</button>
+  <button onclick="enviarDM('M','GOD’S PLAN')">M (sold out)</button>
 </div>
+  <p class="hint">
+  Te abrimos Instagram y copiamos el mensaje para enviarlo rápido.
+</p>
 
 </section>
 
@@ -184,6 +183,9 @@ a {
   <button onclick="enviarDM('S','TEMPLA NEGRA',1)">S (2)</button>
   <button onclick="enviarDM('M','TEMPLA NEGRA',2)">M (0)</button>
 </div>
+  <p class="hint">
+  Te abrimos Instagram y copiamos el mensaje para enviarlo rápido.
+</p>
 </section>
 
 <section class="section product" style="margin-top:40px;">
